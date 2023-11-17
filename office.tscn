@@ -3599,3 +3599,6 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262149, 524288, 22, 327685, 524288, 23, 393221, 524288, 24, 131078, 589824, 20, 196614, 589824, 21, 262150, 589824, 22, 327686, 589824, 23, 393222, 589824, 24)
+
+[node name="Player" type="Area2D" parent="."]
+metadata/_edit_group_ = true
