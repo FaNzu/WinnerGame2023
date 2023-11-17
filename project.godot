@@ -14,10 +14,6 @@ config/name="WinnerGame"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
-[dotnet]
-
-project/assembly_name="WinnerGame"
-
 [rendering]
 
 renderer/rendering_method="mobile"
