@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://m5arj6ryj0lu"]
+[gd_scene load_steps=27 format=3 uid="uid://ccv62qn4rmqqk"]
 
 [ext_resource type="Script" path="res://Ralf.gd" id="1_d88bh"]
 [ext_resource type="Texture2D" uid="uid://dc3xmges5la8i" path="res://Asset/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_qjexe"]
