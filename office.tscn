@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=10 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
 [ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
 [ext_resource type="Resource" uid="uid://dl07df4lj5evy" path="res://Dialogue/main.dialogue" id="4_ipdh0"]
+[ext_resource type="Resource" uid="uid://cfqqft3bjnnbj" path="res://Dialogue/Test.dialogue" id="5_cl5cu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3620,6 +3621,7 @@ shape = SubResource("CircleShape2D_3nkmf")
 
 [node name="Actionable2" parent="." instance=ExtResource("3_4ahp8")]
 position = Vector2(303, 68)
+dialogue_Resource = ExtResource("5_cl5cu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2"]
 shape = SubResource("CircleShape2D_fkq75")
