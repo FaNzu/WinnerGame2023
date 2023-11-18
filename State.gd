@@ -24,6 +24,10 @@ var OleLeaves: bool = false
 var LeifFirst: bool = true
 var LeifRequest: bool = false
 var AironditionFixed: bool = false
+#func CheckRalfLocation():
+	#if: Character.Ralf.Location.x == 120
+	#	if Character.Ralf.Location.y == 120
+	#		RalfDiscovered = true
 
 var RalfSabotage: bool = true
 var RalfFirst: bool = true

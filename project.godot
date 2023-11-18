@@ -53,7 +53,7 @@ move_down={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/main.dialogue", "res://Dialogue/Test.dialogue", "res://Dialogue/Boss.dialogue", "res://Dialogue/Ole.dialogue", "res://Dialogue/Hanne.dialogue", "res://Dialogue/Roar.dialogue", "res://Dialogue/Leif.dialogue", "res://Dialogue/Ralf.dialogue", "res://Dialogue/Jan Brown.dialogue", "res://Dialogue/VendingMachine.dialogue", "res://Dialogue/Kamera.dialogue", "res://Dialogue/Camera.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/main.dialogue", "res://Dialogue/Test.dialogue", "res://Dialogue/Boss.dialogue", "res://Dialogue/Ole.dialogue", "res://Dialogue/Hanne.dialogue", "res://Dialogue/Roar.dialogue", "res://Dialogue/Leif.dialogue", "res://Dialogue/Ralf.dialogue", "res://Dialogue/Jan Brown.dialogue", "res://Dialogue/VendingMachine.dialogue", "res://Dialogue/Kamera.dialogue", "res://Dialogue/Camera.dialogue", "res://Dialogue/RalfSabo.dialogue")
 
 [layer_names]
 

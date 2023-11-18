@@ -1,4 +1,5 @@
 ~ start
+#do.State.CheckRalfLocation()
 if State.RalfFirst == true
 	Ralf: Chefen skal nok indse at jeg er den eneste af værdi i dette kontorhelvede og en nyansat kaffe henter som dig, skal ikke stå i vejen for mig.
 	set State.RalfFirst = false
