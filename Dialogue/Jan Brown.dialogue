@@ -26,7 +26,7 @@ if State.OleQuest < 5
 	if State.OleQuest == 4
 		Jan Brown: Ham den gamle virker godt nok glad ligepludselig, som om han blev 30 år yngre.
 		=> END
-if State.LeifQuest < 3
+if State.LeifQuest < 5
 	if State.LeifQuest == 0
 		Jan Brown: Der er godt nok varmt herinde. Ham i hjørnet, med alle skærmene, ligner en der er ved at kradse af.
 		=> END
@@ -37,6 +37,9 @@ if State.LeifQuest < 3
 		Jan Brown: Elsker kameraer, det er så vigtigt at kunne fange livets momenter for evigt. Jeg tror de har et kamer i en af kasserne ude ved toiletterne.
 		=> END
 	if State.LeifQuest == 3
+		Jan Brown: Take the shot
+		=> END
+	if State.LeifQuest == 4
 		Jan Brown: Skærme fyren ser ud til at have det meget bedre. Godt klaret.
 		=> END
 	

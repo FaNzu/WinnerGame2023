@@ -9,4 +9,7 @@ if State.CameraExists == true
 	else 
 		Old boxes
 		=> END
+else 
+	Old boxes
+	=> END
 	
