@@ -1,10 +1,18 @@
-[gd_scene load_steps=28 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=48 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
 [ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
+[ext_resource type="Resource" uid="uid://b1cvped6jn2f8" path="res://Dialogue/Ole.dialogue" id="4_ubgww"]
+[ext_resource type="Texture2D" uid="uid://f3ff7qg5dr13" path="res://Asset/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="5_57tn6"]
+[ext_resource type="Resource" uid="uid://btl3007dpfk6o" path="res://Dialogue/Leif.dialogue" id="6_lamvg"]
+[ext_resource type="Resource" uid="uid://lnbm8078sp5r" path="res://Dialogue/Jan Brown.dialogue" id="7_so8qv"]
+[ext_resource type="Texture2D" uid="uid://cbt277fxrno3l" path="res://Asset/Modern tiles_Free/Characters_free/Leif.png" id="8_5q7s1"]
+[ext_resource type="Resource" uid="uid://cj4thxbqfjk76" path="res://Dialogue/Hanne.dialogue" id="9_wx0o1"]
+[ext_resource type="Texture2D" uid="uid://ds2stk2sdp7am" path="res://Asset/Modern tiles_Free/Characters_free/JanBrown.png" id="10_47mkg"]
 [ext_resource type="Resource" uid="uid://cuym10l07loql" path="res://Dialogue/Roar.dialogue" id="11_juaov"]
+[ext_resource type="Texture2D" uid="uid://cvv5672ogm5gi" path="res://Asset/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="13_7fr2i"]
 [ext_resource type="Texture2D" uid="uid://bwwxe2a76bqna" path="res://Asset/Modern tiles_Free/Characters_free/roar.png" id="17_n1c46"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_emcqj"]
@@ -4234,6 +4242,74 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_50hhd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbtjk"]
+atlas = ExtResource("8_5q7s1")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lj8m3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtjk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6cja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ola5r"]
+atlas = ExtResource("10_47mkg")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_je2jp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ola5r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oi4r0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8fnw"]
+atlas = ExtResource("13_7fr2i")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2lian"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8fnw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ndkes"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iply4"]
+atlas = ExtResource("5_57tn6")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hhcwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iply4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4269,12 +4345,54 @@ metadata/_edit_group_ = true
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
 position = Vector2(524, 295)
 
-[node name="Actionable" parent="." instance=ExtResource("3_4ahp8")]
+[node name="Roar" parent="." instance=ExtResource("3_4ahp8")]
 position = Vector2(539, 196)
 dialogue_Resource = ExtResource("11_juaov")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roar"]
 shape = SubResource("CircleShape2D_s8q1v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Actionable"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Roar"]
 sprite_frames = SubResource("SpriteFrames_2wv5l")
+
+[node name="Leif" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(614, 391)
+dialogue_Resource = ExtResource("6_lamvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leif"]
+shape = SubResource("CircleShape2D_50hhd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leif"]
+sprite_frames = SubResource("SpriteFrames_lj8m3")
+
+[node name="Jan" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(378, 346)
+dialogue_Resource = ExtResource("7_so8qv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jan"]
+shape = SubResource("CircleShape2D_o6cja")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jan"]
+sprite_frames = SubResource("SpriteFrames_je2jp")
+
+[node name="Hanne" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(459, 309)
+dialogue_Resource = ExtResource("9_wx0o1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hanne"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_oi4r0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hanne"]
+sprite_frames = SubResource("SpriteFrames_2lian")
+
+[node name="Ole" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(459, 377)
+dialogue_Resource = ExtResource("4_ubgww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ole"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_ndkes")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ole"]
+sprite_frames = SubResource("SpriteFrames_hhcwo")
