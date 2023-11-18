@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=42 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
 [ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
@@ -8,11 +8,16 @@
 [ext_resource type="Resource" uid="uid://7x4oaha85h46" path="res://Dialogue/Boss.dialogue" id="5_8814j"]
 [ext_resource type="Resource" uid="uid://btl3007dpfk6o" path="res://Dialogue/Leif.dialogue" id="6_lamvg"]
 [ext_resource type="Resource" uid="uid://lnbm8078sp5r" path="res://Dialogue/Jan Brown.dialogue" id="7_so8qv"]
+[ext_resource type="Texture2D" path="res://Asset/Modern tiles_Free/Characters_free/Leif.png" id="8_5q7s1"]
 [ext_resource type="Resource" uid="uid://cmfeuy40a6oy0" path="res://Dialogue/Camera.dialogue" id="8_cy4dk"]
 [ext_resource type="Resource" uid="uid://cj4thxbqfjk76" path="res://Dialogue/Hanne.dialogue" id="9_wx0o1"]
+[ext_resource type="Texture2D" uid="uid://ds2stk2sdp7am" path="res://Asset/Modern tiles_Free/Characters_free/JanBrown.png" id="10_47mkg"]
 [ext_resource type="Resource" uid="uid://cqickw76a86md" path="res://Dialogue/Ralf.dialogue" id="10_yqpem"]
 [ext_resource type="Resource" uid="uid://cuym10l07loql" path="res://Dialogue/Roar.dialogue" id="11_juaov"]
 [ext_resource type="Resource" uid="uid://ct7u7ogng33wk" path="res://Dialogue/VendingMachine.dialogue" id="12_1oh4c"]
+[ext_resource type="Texture2D" uid="uid://cvv5672ogm5gi" path="res://Asset/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="13_7fr2i"]
+[ext_resource type="Texture2D" uid="uid://dhsjo7lcoeo3i" path="res://Asset/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="15_eft3w"]
+[ext_resource type="Texture2D" path="res://Asset/Modern tiles_Free/Characters_free/roar.png" id="17_n1c46"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3599,7 +3604,7 @@ sources/0 = SubResource("TileSetAtlasSource_yokv4")
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nkmf"]
 radius = 11.4018
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ilaok"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfm0d"]
 atlas = ExtResource("5_57tn6")
 region = Rect2(48, 0, 16, 32)
 
@@ -3607,7 +3612,7 @@ region = Rect2(48, 0, 16, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ilaok")
+"texture": SubResource("AtlasTexture_sfm0d")
 }],
 "loop": true,
 "name": &"default",
@@ -3619,15 +3624,90 @@ radius = 12.8062
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_43633"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ied7c"]
+atlas = ExtResource("8_5q7s1")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acfun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ied7c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucryp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2ry3"]
+atlas = ExtResource("10_47mkg")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lljul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2ry3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dvli"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qodnl"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjmba"]
+atlas = ExtResource("13_7fr2i")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_45smx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjmba")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ibkg"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm0qu"]
+atlas = ExtResource("15_eft3w")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abvfj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm0qu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_yykw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7x3a"]
+atlas = ExtResource("17_n1c46")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72uf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7x3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qxwc"]
 
@@ -3658,7 +3738,7 @@ position = Vector2(40, 196)
 shape = SubResource("CircleShape2D_3nkmf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActOle"]
-position = Vector2(40, 191)
+position = Vector2(39, 192)
 sprite_frames = SubResource("SpriteFrames_5lkqx")
 
 [node name="ActBoss" parent="." instance=ExtResource("3_4ahp8")]
@@ -3677,12 +3757,20 @@ dialogue_Resource = ExtResource("6_lamvg")
 position = Vector2(192, 190)
 shape = SubResource("CircleShape2D_43633")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActLeif"]
+position = Vector2(192, 190)
+sprite_frames = SubResource("SpriteFrames_acfun")
+
 [node name="ActJan" parent="." instance=ExtResource("3_4ahp8")]
 dialogue_Resource = ExtResource("7_so8qv")
 
 [node name="CsJan" type="CollisionShape2D" parent="ActJan"]
 position = Vector2(118, 194)
 shape = SubResource("CircleShape2D_ucryp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActJan"]
+position = Vector2(118, 193)
+sprite_frames = SubResource("SpriteFrames_lljul")
 
 [node name="ActCamera" parent="." instance=ExtResource("3_4ahp8")]
 dialogue_Resource = ExtResource("8_cy4dk")
@@ -3698,6 +3786,10 @@ dialogue_Resource = ExtResource("9_wx0o1")
 position = Vector2(41, 281)
 shape = SubResource("CircleShape2D_qodnl")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActHanne"]
+position = Vector2(41, 275)
+sprite_frames = SubResource("SpriteFrames_45smx")
+
 [node name="ActRalf" parent="." instance=ExtResource("3_4ahp8")]
 dialogue_Resource = ExtResource("10_yqpem")
 
@@ -3705,12 +3797,20 @@ dialogue_Resource = ExtResource("10_yqpem")
 position = Vector2(193, 234)
 shape = SubResource("CircleShape2D_1ibkg")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActRalf"]
+position = Vector2(194, 228)
+sprite_frames = SubResource("SpriteFrames_abvfj")
+
 [node name="ActRoar" parent="." instance=ExtResource("3_4ahp8")]
 dialogue_Resource = ExtResource("11_juaov")
 
 [node name="CsRoar" type="CollisionShape2D" parent="ActRoar"]
 position = Vector2(118, 240)
 shape = SubResource("CircleShape2D_yykw2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActRoar"]
+position = Vector2(118, 240)
+sprite_frames = SubResource("SpriteFrames_72uf3")
 
 [node name="ActVendingM" parent="." instance=ExtResource("3_4ahp8")]
 dialogue_Resource = ExtResource("12_1oh4c")
