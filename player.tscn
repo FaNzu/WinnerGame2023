@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bqn7p0ockbkre" path="res://animated_sprite_2d.tscn" id="2_fskw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyfrq"]
-size = Vector2(17, 10)
+size = Vector2(15, 10)
 
 [node name="Player" type="Node2D"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
-[ext_resource type="PackedScene" uid="uid://b0xlotpv0s0vc" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://mx6uk20uupyg" path="res://player.tscn" id="2_p0e0x"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_emcqj"]
 tile_data = PackedInt32Array(0, 655365, 44, 65536, 655365, 45, 131072, 655365, 46, 1, 720901, 44, 65537, 720901, 45, 131073, 720901, 46)
@@ -4213,3 +4213,4 @@ layer_4/tile_data = PackedInt32Array(196611, 5, 26, 262147, 5, 27, 196612, 65541
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
+position = Vector2(21, 29)
