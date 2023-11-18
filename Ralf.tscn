@@ -155,6 +155,7 @@ animations = [{
 
 [node name="Ralf" type="CharacterBody2D" parent="."]
 script = ExtResource("1_d88bh")
+speed = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf"]
 position = Vector2(0, 11)
