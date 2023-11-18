@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=5 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
+[ext_resource type="PackedScene" uid="uid://mx6uk20uupyg" path="res://player.tscn" id="2_hfjdq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3601,3 +3602,5 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262149, 524288, 22, 327685, 524288, 23, 393221, 524288, 24, 131078, 589824, 20, 196614, 589824, 21, 262150, 589824, 22, 327686, 589824, 23, 393222, 589824, 24)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_hfjdq")]
