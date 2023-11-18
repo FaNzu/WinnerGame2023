@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://mx6uk20uupyg"]
+[gd_scene load_steps=4 format=3 uid="uid://i1krquafwv3g"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_cvdfo"]
-[ext_resource type="PackedScene" uid="uid://bqn7p0ockbkre" path="res://animated_sprite_2d.tscn" id="2_fskw4"]
+[ext_resource type="PackedScene" path="res://animated_sprite_2d.tscn" id="2_fskw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyfrq"]
 size = Vector2(15, 10)
@@ -17,3 +17,10 @@ position = Vector2(8.5, 15)
 shape = SubResource("RectangleShape2D_lyfrq")
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" instance=ExtResource("2_fskw4")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
