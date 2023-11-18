@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://j7mtff6xlo3"]
+[gd_scene load_steps=10 format=3 uid="uid://j7mtff6xlo3"]
 
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
-[ext_resource type="PackedScene" uid="uid://mx6uk20uupyg" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="Script" path="res://TileMap.gd" id="3_5ksdu"]
+[ext_resource type="Script" path="res://Player.gd" id="4_1i86u"]
+[ext_resource type="PackedScene" uid="uid://bqn7p0ockbkre" path="res://animated_sprite_2d.tscn" id="4_s3h5u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wunf"]
 texture = ExtResource("1_vlwbk")
@@ -4114,6 +4115,9 @@ physics_layer_0/collision_layer = 1
 sources/5 = SubResource("TileSetAtlasSource_4wunf")
 sources/8 = SubResource("TileSetAtlasSource_04580")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjicr"]
+size = Vector2(17, 20)
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." groups=["Map"]]
@@ -4140,4 +4144,11 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(131073, 655365, 44, 196609, 655365, 45, 262145, 655365, 46, 131074, 720901, 44, 196610, 720901, 45, 262146, 720901, 46, -65534, 458757, 8, 2, 458757, 9, -65523, 458757, 48, 13, 458757, 49, 65549, 458757, 50, -65522, 524293, 48, 14, 524293, 49, 65550, 524293, 50, -65526, 655365, 44, 10, 655365, 45, 65546, 655365, 46, -65525, 720901, 44, 11, 720901, 45, 65547, 720901, 46, -65529, 589829, 28, 7, 589829, 29, -65524, 589829, 28, 12, 589829, 29, -65532, 5, 14, 4, 5, 15, -65531, 65541, 14, 5, 65541, 15, 131083, 458757, 13, 196619, 458757, 14, 196620, 524293, 14, 131085, 589829, 13, 196621, 589829, 14, 131084, 524293, 13)
 script = ExtResource("3_5ksdu")
 
-[node name="Player" parent="." instance=ExtResource("2_p0e0x")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("4_1i86u")
+
+[node name="AnimatedSprite2D" parent="CharacterBody2D" instance=ExtResource("4_s3h5u")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(8.5, 10)
+shape = SubResource("RectangleShape2D_sjicr")
