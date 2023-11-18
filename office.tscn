@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
-[ext_resource type="PackedScene" uid="uid://bkahso26xdb3h" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3603,4 +3603,3 @@ layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262
 
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
 position = Vector2(257, 143)
-scale = Vector2(4.39, 4.39)
