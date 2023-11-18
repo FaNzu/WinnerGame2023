@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=9 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
 [ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
+[ext_resource type="Resource" uid="uid://dl07df4lj5evy" path="res://Dialogue/main.dialogue" id="4_ipdh0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3585,6 +3587,11 @@ texture = ExtResource("1_crm0r")
 [sub_resource type="TileSet" id="TileSet_osklw"]
 sources/0 = SubResource("TileSetAtlasSource_yokv4")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nkmf"]
+radius = 27.074
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkq75"]
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3603,3 +3610,16 @@ layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262
 
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
 position = Vector2(257, 143)
+
+[node name="Actionable" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("4_ipdh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(104, 82)
+shape = SubResource("CircleShape2D_3nkmf")
+
+[node name="Actionable2" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(303, 68)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2"]
+shape = SubResource("CircleShape2D_fkq75")
