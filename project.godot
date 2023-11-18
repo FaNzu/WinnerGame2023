@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 project/assembly_name="WinnerGame"
 
+<<<<<<< HEAD
 [input]
 
 move_right={
@@ -42,6 +43,8 @@ move_down={
 ]
 }
 
+=======
+>>>>>>> OfficeBuilding
 [rendering]
 
 renderer/rendering_method="mobile"
