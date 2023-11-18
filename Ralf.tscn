@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ccv62qn4rmqqk"]
+[gd_scene load_steps=27 format=3 uid="uid://m5arj6ryj0lu"]
 
 [ext_resource type="Script" path="res://Ralf.gd" id="1_d88bh"]
 [ext_resource type="Texture2D" uid="uid://dc3xmges5la8i" path="res://Asset/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_qjexe"]
@@ -172,9 +172,9 @@ animation = &"walk_right"
 frame = 4
 frame_progress = 0.358853
 
-[node name="Actionable" parent="." instance=ExtResource("4_xvcis")]
+[node name="Actionable" parent="Ralf" instance=ExtResource("4_xvcis")]
 dialogue_Resource = ExtResource("5_16hmd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf/Actionable"]
 position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_5vk0y")

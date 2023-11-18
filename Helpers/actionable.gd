@@ -7,3 +7,4 @@ extends Area2D
 func action() -> void:
 	DialogueManager.show_dialogue_balloon(dialogue_Resource,dialogue_start)
 	return
+
