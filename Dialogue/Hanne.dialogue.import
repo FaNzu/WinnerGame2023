@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cj4thxbqfjk76"
+path="res://.godot/imported/Hanne.dialogue-4a503a9624170df05dd0ef3edd69c995.tres"
+
+[deps]
+
+source_file="res://Dialogue/Hanne.dialogue"
+dest_files=["res://.godot/imported/Hanne.dialogue-4a503a9624170df05dd0ef3edd69c995.tres"]
+
+[params]
+
+defaults=true
