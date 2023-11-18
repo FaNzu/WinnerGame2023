@@ -1,0 +1,12 @@
+~ start
+if State.CameraExists == true
+	if State.LeifQuest == 2
+		Du roder rundt i kasserne og finder et gammelt kamera
+		Du tager den med dig.
+		set State.CameraExists = false
+		set State.LeifQuest += 1
+		=> END
+	else 
+		Old boxes
+		=> END
+	

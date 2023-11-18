@@ -1,0 +1,42 @@
+~ start
+if State.JanFirst == true
+	Jan Brown: Sikke en situation du finder dig selv i.
+	Jan Brown: Kald mig Jan
+	Jan: Brown
+	Jan Brown: Tak
+	Jan Brown: Du er fanget i et Loop
+	Jan Brown: Noget holder dig her, måske har det endda brug for præcist dig, til at være her.
+	Jan Brown: Held og Lykke
+	Jan Brown: Kom og snak, når du føler dig fortabt.
+	set State.JanFirst = false
+	=> END
+if State.OleQuest < 5
+	if State.OleQuest == 0
+		Jan Brown: Gad vide hvems olefar der er kommet med på arbejde.
+		=> END
+	if State.OleQuest == 1
+		Jan Brown: Hvis du bliver trængende, er der en automat herinde et sted.
+		=> END
+	if State.OleQuest == 2
+		Jan Brown: Jeg tror ikke jeg har set Hanne rejse sig endnu. Gad vide om hun er limet fast.
+		=> END
+	if State.OleQuest == 3
+		Jan Brown: Det var godt nok noget af et billede. Jeg ville ikke ønske nogen havde sådan et billede af mig.
+		=> END
+	if State.OleQuest == 4
+		Jan Brown: Ham den gamle virker godt nok glad ligepludselig, som om han blev 30 år yngre.
+		=> END
+if State.LeifQuest < 3
+	if State.LeifQuest == 0
+		Jan Brown: Der er godt nok varmt herinde. Ham i hjørnet, med alle skærmene, ligner en der er ved at kradse af.
+		=> END
+	if State.LeifQuest == 1
+		Jan Brown: Ham fyren piller godt nok meget ved printeren.
+		=> END
+	if State.LeifQuest == 2
+		Jan Brown: Elsker kameraer, det er så vigtigt at kunne fange livets momenter for evigt. Jeg tror de har et kamer i en af kasserne ude ved toiletterne.
+		=> END
+	if State.LeifQuest == 3
+		Jan Brown: Skærme fyren ser ud til at have det meget bedre. Godt klaret.
+		=> END
+	

@@ -1,0 +1,23 @@
+~ start
+if State.OleFirst == true
+	Ole: Endnu et nyt ansigt. Så mange er kommet og gået.. Jeg kommer sikkert ikke engang til at gå herfra før du gør… Chefen vil ikke lade mig gå på pension.. I det mindste må det betyde, at jeg er værdsat.
+	Ole: Tak for at snakke med mig, tag en mønt.
+	Du fik en mønt
+	set State.OleFirst = false
+	set State.OleRequest = true
+	set State.Coin += 1
+	set State.OleQuest +=1
+	=> END
+if State.OlePensioned == true
+	Ole: Jeg er fri! Ej, jeg glæder mig sådan til… ingenting, tror jeg. Jeg glæder mig til at lave ingenting! Farvel røvhulder, jeg ser frem til aldrig at skulle se jer igen, specielt dig Jim.
+	set State.OlePensioned = false
+	set State.OleLeaves = true
+	set State.GoalsReached += 1
+	set State.OleQuest +=1
+	=> END
+if State.OleLeaves == true
+	Ole: Farveller!
+	=> END
+else
+	Ole: Jeg er for gammel til det her lort.
+	=> END

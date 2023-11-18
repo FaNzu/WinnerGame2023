@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cuym10l07loql"
+path="res://.godot/imported/Roar.dialogue-884a974918b32a9eacee354d1f6ea513.tres"
+
+[deps]
+
+source_file="res://Dialogue/Roar.dialogue"
+dest_files=["res://.godot/imported/Roar.dialogue-884a974918b32a9eacee354d1f6ea513.tres"]
+
+[params]
+
+defaults=true
