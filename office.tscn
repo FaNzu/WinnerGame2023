@@ -1,9 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=24 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
-[ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
-[ext_resource type="Resource" uid="uid://dl07df4lj5evy" path="res://Dialogue/main.dialogue" id="4_ipdh0"]
+[ext_resource type="Resource" uid="uid://b1cvped6jn2f8" path="res://Dialogue/Ole.dialogue" id="4_ubgww"]
+[ext_resource type="Resource" uid="uid://7x4oaha85h46" path="res://Dialogue/Boss.dialogue" id="5_8814j"]
+[ext_resource type="Resource" uid="uid://btl3007dpfk6o" path="res://Dialogue/Leif.dialogue" id="6_lamvg"]
+[ext_resource type="Resource" uid="uid://lnbm8078sp5r" path="res://Dialogue/Jan Brown.dialogue" id="7_so8qv"]
+[ext_resource type="Resource" uid="uid://cmfeuy40a6oy0" path="res://Dialogue/Camera.dialogue" id="8_cy4dk"]
+[ext_resource type="Resource" uid="uid://cj4thxbqfjk76" path="res://Dialogue/Hanne.dialogue" id="9_wx0o1"]
+[ext_resource type="Resource" uid="uid://cqickw76a86md" path="res://Dialogue/Ralf.dialogue" id="10_yqpem"]
+[ext_resource type="Resource" uid="uid://cuym10l07loql" path="res://Dialogue/Roar.dialogue" id="11_juaov"]
+[ext_resource type="Resource" uid="uid://ct7u7ogng33wk" path="res://Dialogue/VendingMachine.dialogue" id="12_1oh4c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3588,9 +3596,24 @@ texture = ExtResource("1_crm0r")
 sources/0 = SubResource("TileSetAtlasSource_yokv4")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nkmf"]
-radius = 27.074
+radius = 11.4018
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkq75"]
+radius = 12.8062
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_43633"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ucryp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dvli"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qodnl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ibkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yykw2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qxwc"]
 
 [node name="Office" type="Node2D"]
 
@@ -3611,15 +3634,67 @@ layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
 position = Vector2(257, 143)
 
-[node name="Actionable" parent="." instance=ExtResource("3_4ahp8")]
-dialogue_Resource = ExtResource("4_ipdh0")
+[node name="ActOle" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("4_ubgww")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(104, 82)
+[node name="CsOle" type="CollisionShape2D" parent="ActOle"]
+position = Vector2(40, 196)
 shape = SubResource("CircleShape2D_3nkmf")
 
-[node name="Actionable2" parent="." instance=ExtResource("3_4ahp8")]
-position = Vector2(303, 68)
+[node name="ActBoss" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(302, 80)
+dialogue_Resource = ExtResource("5_8814j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2"]
+[node name="CsBoss" type="CollisionShape2D" parent="ActBoss"]
+position = Vector2(-261, 249)
 shape = SubResource("CircleShape2D_fkq75")
+
+[node name="ActLeif" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(1, 2)
+dialogue_Resource = ExtResource("6_lamvg")
+
+[node name="CsLeif" type="CollisionShape2D" parent="ActLeif"]
+position = Vector2(192, 190)
+shape = SubResource("CircleShape2D_43633")
+
+[node name="ActJan" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("7_so8qv")
+
+[node name="CsJan" type="CollisionShape2D" parent="ActJan"]
+position = Vector2(118, 194)
+shape = SubResource("CircleShape2D_ucryp")
+
+[node name="ActCamera" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("8_cy4dk")
+
+[node name="CsCamera" type="CollisionShape2D" parent="ActCamera"]
+position = Vector2(196, 278)
+shape = SubResource("RectangleShape2D_7dvli")
+
+[node name="ActHanne" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("9_wx0o1")
+
+[node name="CsHanne" type="CollisionShape2D" parent="ActHanne"]
+position = Vector2(41, 281)
+shape = SubResource("CircleShape2D_qodnl")
+
+[node name="ActRalf" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("10_yqpem")
+
+[node name="CsRalf" type="CollisionShape2D" parent="ActRalf"]
+position = Vector2(193, 234)
+shape = SubResource("CircleShape2D_1ibkg")
+
+[node name="ActRoar" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("11_juaov")
+
+[node name="CsRoar" type="CollisionShape2D" parent="ActRoar"]
+position = Vector2(118, 240)
+shape = SubResource("CircleShape2D_yykw2")
+
+[node name="ActVendingM" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("12_1oh4c")
+
+[node name="CsVendingM" type="CollisionShape2D" parent="ActVendingM"]
+position = Vector2(42, 241)
+shape = SubResource("RectangleShape2D_3qxwc")

@@ -1,0 +1,53 @@
+~ start
+if State.RalfFirst == true
+	Ralf: Chefen skal nok indse at jeg er den eneste af værdi i dette kontorhelvede og en nyansat kaffe henter som dig, skal ikke stå i vejen for mig.
+	set State.RalfFirst = false
+	=> END
+if State.RalfDiscovered == true
+	Ralf: Så, nu der noget du kan tage dig til.. Chep.. Chep
+	set State.RalfDiscovered = false
+	if State.RalfDiscoveredUpdateQuest == false
+		set State.RalfDiscoveredUpdateQuest = true
+		set State.LeifQuest += 1
+	=> END
+if State.RalfFotoed == true
+	if State.RalfFotoedFirst == false
+		Ralf: Tog du lige et billede… 
+		set State.RalfFotoedFirst == true
+	Ralf: Okay, du fik mig. Hvad vil du ha?
+	set State.RalfSabotage = false
+	if State.LeifRequest == true
+		Player: Fix Leif's Klimaanlæg c:<
+		Ralf: Du vil have at jeg fikser Leifs klimaanlæg?  Okay. Det er klaret, og så forventer jeg at dit lille billede forsvinder, forstået?
+		set State.RalfFotoed = false
+		set State.LeifQuest += 1
+		=> END
+	else
+		Player: Jeg skal nok finde på noget. 
+		=> END
+if State.RalfSabotage == true	
+	do State.DialogueAmount(4)
+	if State.Dialogue == 1
+		Ralf: Jeg har noget godt kørende her, lad vær med at ødelæg det, okay?
+		=> END
+	if State.Dialogue == 2
+		Ralf: Kig dig for.
+		=> END
+	if State.Dialogue == 3
+		Ralf: Vær på vagt, kontor junglen er ligeså farlig som… ja en øhh rigtig jungle. Det lød sejrer i mit hoved, okay!
+		=> END
+	if State.Dialogue == 4
+		Ralf: Håber du tilfreds med printer vagten, der er ofte ‘problemer’ med den, hehehe
+		=> END
+else 
+	do State.DialogueAmount(3)
+	if State.Dialogue == 1
+		Ralf: Jeg har noget godt kørende her, lad vær med at ødelæg det, okay?
+		=> END
+	if State.Dialogue == 2
+		Ralf: Kig dig for.
+		=> END
+	if State.Dialogue == 3
+		Ralf: Vær på vagt, kontor junglen er ligeså farlig som… ja en øhh rigtig jungle. Det lød sejrer i mit hoved, okay!
+		=> END
+	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b1cvped6jn2f8"
+path="res://.godot/imported/Ole.dialogue-c3aad34782c9a0e92838d58ba0f5d91b.tres"
+
+[deps]
+
+source_file="res://Dialogue/Ole.dialogue"
+dest_files=["res://.godot/imported/Ole.dialogue-c3aad34782c9a0e92838d58ba0f5d91b.tres"]
+
+[params]
+
+defaults=true

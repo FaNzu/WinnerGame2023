@@ -1,0 +1,24 @@
+~ start
+if State.LeifFirst == true
+	Leif: Jeg håber en dag at en af mine indiespil går viralt og jeg kan komme ud af dette svedende lokale. Har brokket mig over klimaanlægget i godt og vel 1 måned nu og der er stadig kogende herovre.
+	set State.LeifFirst = false
+	set State.LeifRequest = true
+	set State.LeifQuest +=1
+	=> END
+if State.AirconditionFixed == true
+	Leif: Endelig! Søde søde nedkøling, tak til vejr guderne. eller dig? Har på fornemmelsen at du var involveret. Ralf gør i hvert tilfælde ikke noget gratis.
+	set State.GoalsReached += 1
+	set State.AirconditionFixed = false
+	set State.LeifQuest += 1
+	=> END
+	
+do State.DialogueAmount(3)
+if State.Dialogue == 1
+	Leif: Vil du se mit nye GoDot projekt?
+	=> END
+if State.Dialogue == 2
+	Leif: Prøv at søg efter GoDotCom på GameReactor, så kan du se mine spil!
+	=> END
+if State.Dialogue == 3
+	Leif: Hvis chefen spørger, så er jeg igang med en vigtig It-Løsning der kan spare firmaet for potentielt millioner.
+	=> END

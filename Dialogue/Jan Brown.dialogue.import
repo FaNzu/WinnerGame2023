@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://lnbm8078sp5r"
+path="res://.godot/imported/Jan Brown.dialogue-5567bb1c41156537c79b1efb19409e65.tres"
+
+[deps]
+
+source_file="res://Dialogue/Jan Brown.dialogue"
+dest_files=["res://.godot/imported/Jan Brown.dialogue-5567bb1c41156537c79b1efb19409e65.tres"]
+
+[params]
+
+defaults=true

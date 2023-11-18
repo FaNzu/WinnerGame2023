@@ -1,0 +1,10 @@
+~ start
+if State.Coin > 0
+	Du købte en pakke smøger
+	set State.OleQuest +=1
+	set State.Ciggarettes = true
+	set State.Coin -=1
+	=> END
+else
+	Du fattig
+	=> END

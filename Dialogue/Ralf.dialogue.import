@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cqickw76a86md"
+path="res://.godot/imported/Ralf.dialogue-6d1c7b0ee7231d565d9bdf3d0e6b121f.tres"
+
+[deps]
+
+source_file="res://Dialogue/Ralf.dialogue"
+dest_files=["res://.godot/imported/Ralf.dialogue-6d1c7b0ee7231d565d9bdf3d0e6b121f.tres"]
+
+[params]
+
+defaults=true
