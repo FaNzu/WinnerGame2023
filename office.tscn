@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=27 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
 [ext_resource type="Resource" uid="uid://b1cvped6jn2f8" path="res://Dialogue/Ole.dialogue" id="4_ubgww"]
+[ext_resource type="Texture2D" uid="uid://f3ff7qg5dr13" path="res://Asset/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="5_57tn6"]
 [ext_resource type="Resource" uid="uid://7x4oaha85h46" path="res://Dialogue/Boss.dialogue" id="5_8814j"]
 [ext_resource type="Resource" uid="uid://btl3007dpfk6o" path="res://Dialogue/Leif.dialogue" id="6_lamvg"]
 [ext_resource type="Resource" uid="uid://lnbm8078sp5r" path="res://Dialogue/Jan Brown.dialogue" id="7_so8qv"]
@@ -3598,6 +3599,21 @@ sources/0 = SubResource("TileSetAtlasSource_yokv4")
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nkmf"]
 radius = 11.4018
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilaok"]
+atlas = ExtResource("5_57tn6")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5lkqx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilaok")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkq75"]
 radius = 12.8062
 
@@ -3640,6 +3656,10 @@ dialogue_Resource = ExtResource("4_ubgww")
 [node name="CsOle" type="CollisionShape2D" parent="ActOle"]
 position = Vector2(40, 196)
 shape = SubResource("CircleShape2D_3nkmf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ActOle"]
+position = Vector2(40, 191)
+sprite_frames = SubResource("SpriteFrames_5lkqx")
 
 [node name="ActBoss" parent="." instance=ExtResource("3_4ahp8")]
 position = Vector2(302, 80)
