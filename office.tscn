@@ -1,8 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://j7mtff6xlo3"]
+[gd_scene load_steps=28 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
-[ext_resource type="PackedScene" uid="uid://b0xlotpv0s0vc" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
+[ext_resource type="Resource" uid="uid://cuym10l07loql" path="res://Dialogue/Roar.dialogue" id="11_juaov"]
+[ext_resource type="Texture2D" uid="uid://bwwxe2a76bqna" path="res://Asset/Modern tiles_Free/Characters_free/roar.png" id="17_n1c46"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_emcqj"]
 tile_data = PackedInt32Array(0, 655365, 44, 65536, 655365, 45, 131072, 655365, 46, 1, 720901, 44, 65537, 720901, 45, 131073, 720901, 46)
@@ -4214,6 +4217,23 @@ pattern_12 = SubResource("TileMapPattern_1nkwr")
 pattern_13 = SubResource("TileMapPattern_0bdmb")
 pattern_14 = SubResource("TileMapPattern_mxrwj")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8q1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imltn"]
+atlas = ExtResource("17_n1c46")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wv5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imltn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4247,3 +4267,14 @@ layer_3/tile_data = PackedInt32Array(589841, 786437, 46, 917506, 458757, 13, 983
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_p0e0x")]
+position = Vector2(524, 295)
+
+[node name="Actionable" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(539, 196)
+dialogue_Resource = ExtResource("11_juaov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+shape = SubResource("CircleShape2D_s8q1v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Actionable"]
+sprite_frames = SubResource("SpriteFrames_2wv5l")
