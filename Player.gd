@@ -27,6 +27,3 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.play("idle")
 		pass
-	# Check for input
-	# Move in the given direction.
-	# Play the appropriate animation.
