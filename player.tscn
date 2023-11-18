@@ -1,8 +1,11 @@
-[gd_scene load_steps=36 format=3 uid="uid://i1krquafwv3g"]
+[gd_scene load_steps=36 format=3 uid="uid://mx6uk20uupyg"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_cvdfo"]
 [ext_resource type="Texture2D" uid="uid://deuxhucu1sacl" path="res://Asset/Modern tiles_Free/Characters_free/Adam_idle_anim_16x16.png" id="2_dovj5"]
 [ext_resource type="Texture2D" uid="uid://dt8ck3cjy52a" path="res://Asset/Modern tiles_Free/Characters_free/Adam_run_16x16.png" id="3_yi8t3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wib8t"]
+radius = 13.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x142p"]
 atlas = ExtResource("2_dovj5")
@@ -239,34 +242,29 @@ animations = [{
 radius = 5.0
 height = 16.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wib8t"]
-radius = 13.0
-
 [node name="Player" type="Node2D"]
 
-[node name="Player" type="Area2D" parent="."]
-position = Vector2(1, -8)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_cvdfo")
-metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="direction" type="Marker2D" parent="CharacterBody2D"]
+
+[node name="Actionablefinder" type="Area2D" parent="CharacterBody2D/direction"]
+visibility_layer = 0
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/direction/Actionablefinder"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_wib8t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -8)
 sprite_frames = SubResource("SpriteFrames_gf831")
 animation = &"idle"
 frame = 5
 frame_progress = 0.20411
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, 8)
-shape = SubResource("CapsuleShape2D_mjdu2")
-
-[node name="direction" type="Marker2D" parent="Player"]
-position = Vector2(-1, 8)
-
-[node name="Actionablefinder" type="Area2D" parent="Player/direction"]
-visibility_layer = 0
-collision_layer = 0
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/direction/Actionablefinder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
-shape = SubResource("CircleShape2D_wib8t")
+shape = SubResource("CapsuleShape2D_mjdu2")
