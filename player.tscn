@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b0xlotpv0s0vc"]
+[gd_scene load_steps=35 format=3 uid="uid://mx6uk20uupyg"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_cvdfo"]
 [ext_resource type="Texture2D" uid="uid://deuxhucu1sacl" path="res://Asset/Modern tiles_Free/Characters_free/Adam_idle_anim_16x16.png" id="2_dovj5"]
@@ -236,12 +236,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0p5ly"]
-size = Vector2(16, 16)
+size = Vector2(18, 26)
 
 [node name="Player" type="Node2D"]
 
 [node name="Player" type="Area2D" parent="."]
-position = Vector2(9, 0)
+position = Vector2(9, 4)
 script = ExtResource("1_cvdfo")
 metadata/_edit_group_ = true
 
@@ -252,5 +252,6 @@ frame = 5
 frame_progress = 0.20411
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, 8)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_0p5ly")
+debug_color = Color(0.972549, 0.0431373, 0.4, 0.419608)

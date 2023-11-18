@@ -26,8 +26,7 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 	else:
 		$AnimatedSprite2D.play("idle")
-	
-	pass
+		pass
 	# Check for input
 	# Move in the given direction.
 	# Play the appropriate animation.
