@@ -1,14 +1,14 @@
-[gd_scene load_steps=42 format=3 uid="uid://bmduv4muh1xa"]
+[gd_scene load_steps=44 format=3 uid="uid://bmduv4muh1xa"]
 
 [ext_resource type="Texture2D" uid="uid://bijmlgp2h0dgx" path="res://Asset/Modern tiles_Free/Interiors_free/32x32/Interiors_free_32x32.png" id="1_crm0r"]
-[ext_resource type="PackedScene" uid="uid://i1krquafwv3g" path="res://player.tscn" id="2_p0e0x"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_p0e0x"]
 [ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
 [ext_resource type="Resource" uid="uid://b1cvped6jn2f8" path="res://Dialogue/Ole.dialogue" id="4_ubgww"]
 [ext_resource type="Texture2D" uid="uid://f3ff7qg5dr13" path="res://Asset/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="5_57tn6"]
 [ext_resource type="Resource" uid="uid://7x4oaha85h46" path="res://Dialogue/Boss.dialogue" id="5_8814j"]
 [ext_resource type="Resource" uid="uid://btl3007dpfk6o" path="res://Dialogue/Leif.dialogue" id="6_lamvg"]
 [ext_resource type="Resource" uid="uid://lnbm8078sp5r" path="res://Dialogue/Jan Brown.dialogue" id="7_so8qv"]
-[ext_resource type="Texture2D" path="res://Asset/Modern tiles_Free/Characters_free/Leif.png" id="8_5q7s1"]
+[ext_resource type="Texture2D" uid="uid://cbt277fxrno3l" path="res://Asset/Modern tiles_Free/Characters_free/Leif.png" id="8_5q7s1"]
 [ext_resource type="Resource" uid="uid://cmfeuy40a6oy0" path="res://Dialogue/Camera.dialogue" id="8_cy4dk"]
 [ext_resource type="Resource" uid="uid://cj4thxbqfjk76" path="res://Dialogue/Hanne.dialogue" id="9_wx0o1"]
 [ext_resource type="Texture2D" uid="uid://ds2stk2sdp7am" path="res://Asset/Modern tiles_Free/Characters_free/JanBrown.png" id="10_47mkg"]
@@ -17,7 +17,8 @@
 [ext_resource type="Resource" uid="uid://ct7u7ogng33wk" path="res://Dialogue/VendingMachine.dialogue" id="12_1oh4c"]
 [ext_resource type="Texture2D" uid="uid://cvv5672ogm5gi" path="res://Asset/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="13_7fr2i"]
 [ext_resource type="Texture2D" uid="uid://dhsjo7lcoeo3i" path="res://Asset/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="15_eft3w"]
-[ext_resource type="Texture2D" path="res://Asset/Modern tiles_Free/Characters_free/roar.png" id="17_n1c46"]
+[ext_resource type="Texture2D" uid="uid://bwwxe2a76bqna" path="res://Asset/Modern tiles_Free/Characters_free/roar.png" id="17_n1c46"]
+[ext_resource type="Resource" uid="uid://bryp26err5ge0" path="res://Dialogue/CatchRalf.dialogue" id="19_hcjtp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yokv4"]
 texture = ExtResource("1_crm0r")
@@ -3711,6 +3712,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qxwc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxann"]
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3818,3 +3821,10 @@ dialogue_Resource = ExtResource("12_1oh4c")
 [node name="CsVendingM" type="CollisionShape2D" parent="ActVendingM"]
 position = Vector2(42, 241)
 shape = SubResource("RectangleShape2D_3qxwc")
+
+[node name="ActCatchRalf" parent="." instance=ExtResource("3_4ahp8")]
+position = Vector2(134.004, 311.482)
+dialogue_Resource = ExtResource("19_hcjtp")
+
+[node name="CsCatchRalf" type="CollisionShape2D" parent="ActCatchRalf"]
+shape = SubResource("RectangleShape2D_qxann")

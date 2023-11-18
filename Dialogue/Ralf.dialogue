@@ -21,6 +21,7 @@ if State.RalfFotoed == true
 		Player: Fix Leif's Klimaanlæg c:<
 		Ralf: Du vil have at jeg fikser Leifs klimaanlæg?  Okay. Det er klaret, og så forventer jeg at dit lille billede forsvinder, forstået?
 		set State.RalfFotoed = false
+		set State.AirconditionFixed = true
 		set State.LeifQuest += 1
 		=> END
 	else
