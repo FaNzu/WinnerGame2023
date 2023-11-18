@@ -2,6 +2,7 @@ extends Area2D
 
 @export var speed = 400   # How fast the player moves
 @onready var actionable_finder: Area2D = $direction/Actionablefinder
+var PlayingDialogue: bool = false
 var screen_size
 
 func _ready():
@@ -11,15 +12,19 @@ func _process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 50
+		velocity.y = 0
 		$AnimatedSprite2D.play("walkright")
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 50
+		velocity.y = 0		
 		$AnimatedSprite2D.play("walkleft")
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 50
+		velocity.x = 0
 		$AnimatedSprite2D.play("walkup")
 	if Input.is_action_pressed("move_down"):
 		velocity.y += 50
+		velocity.x = 0
 		$AnimatedSprite2D.play("walkdown")
 	position += velocity * delta
 
@@ -29,6 +34,7 @@ func _process(delta):
 			actionables[0].action()
 			return
 			
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 	else:
