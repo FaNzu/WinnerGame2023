@@ -3602,5 +3602,6 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(131077, 524288, 20, 196613, 524288, 21, 262149, 524288, 22, 327685, 524288, 23, 393221, 524288, 24, 131078, 589824, 20, 196614, 589824, 21, 262150, 589824, 22, 327686, 589824, 23, 393222, 589824, 24)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
+position = Vector2(0, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_hfjdq")]
