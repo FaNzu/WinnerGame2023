@@ -1,0 +1,22 @@
+~ start
+if State.Ciggarettes == true
+	Hanne: Smøger! Hvilken slags? Glem det, så længe det kan ryges.
+	set State.Ciggarettes = false
+	set State.HanneLeaves = true
+	Hanne tabte noget
+	Du samler det op
+	Det er et meget grafisk billede af Boss iført en full gimp suit. Det ikke kønt
+	Du putter billedet i lommen
+	set State.BossPicture = true
+	set State.OleQuest +=1
+	=> END!
+do State.DialogueAmount(3)
+if State.Dialogue == 1
+	Hanne: Hey, nye fyr, bare et tip, Ralf kan ikke lide dig.
+	=> END
+if State.Dialogue == 2
+	Hanne: Da jeg kom ind i cafeteriet i morges var Ole også herinde, bad ham komme i sving, dovne læs skal ikke stinke mit territorium op.
+	=> END
+if State.Dialogue == 3
+	Hanne: Har du snakket med Roar endnu? Synes jeg du skal prøve, han er meget hjælpsom.
+	=> END

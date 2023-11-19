@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bryp26err5ge0"
+path="res://.godot/imported/CatchRalf.dialogue-5be12ca9d8462ff77acf15a0f8ea9a16.tres"
+
+[deps]
+
+source_file="res://Dialogue/CatchRalf.dialogue"
+dest_files=["res://.godot/imported/CatchRalf.dialogue-5be12ca9d8462ff77acf15a0f8ea9a16.tres"]
+
+[params]
+
+defaults=true
