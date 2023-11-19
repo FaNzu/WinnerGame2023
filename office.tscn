@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
 [ext_resource type="PackedScene" uid="uid://mx6uk20uupyg" path="res://player.tscn" id="2_p0e0x"]
-[ext_resource type="PackedScene" uid="uid://dac3wt2gb00va" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
+[ext_resource type="PackedScene" uid="uid://cx2r5clt1wo1i" path="res://Helpers/actionable.tscn" id="3_4ahp8"]
 [ext_resource type="PackedScene" uid="uid://m5arj6ryj0lu" path="res://Ralf.tscn" id="4_rlsll"]
 [ext_resource type="Resource" uid="uid://b1cvped6jn2f8" path="res://Dialogue/Ole.dialogue" id="4_ubgww"]
 [ext_resource type="Texture2D" uid="uid://f3ff7qg5dr13" path="res://Asset/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="5_57tn6"]
