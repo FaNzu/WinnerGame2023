@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://j7mtff6xlo3"]
+[gd_scene load_steps=70 format=3 uid="uid://j7mtff6xlo3"]
 
 [ext_resource type="Texture2D" uid="uid://bt32rk6jd8275" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_vlwbk"]
 [ext_resource type="Texture2D" uid="uid://brfx5b8qeyj2i" path="res://Asset/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_lcm3o"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://xhxwwksf6wds" path="res://Asset/Audio.Picture.Music/platformer_level03_loop.ogg" id="21_rfbj2"]
 [ext_resource type="Resource" uid="uid://267y223vslfj" path="res://Dialogue/Door.dialogue" id="22_a74pb"]
 [ext_resource type="Resource" uid="uid://bryp26err5ge0" path="res://Dialogue/CatchRalf.dialogue" id="23_0nvf2"]
+[ext_resource type="Resource" uid="uid://c2xtyo7tdp8pv" path="res://Dialogue/StartDialogue.dialogue" id="24_1gm24"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_emcqj"]
 tile_data = PackedInt32Array(0, 655365, 44, 65536, 655365, 45, 131072, 655365, 46, 1, 720901, 44, 65537, 720901, 45, 131073, 720901, 46)
@@ -4400,6 +4401,9 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kxsle"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4e2g"]
+radius = 7.07107
+
 [node name="Office" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4544,3 +4548,10 @@ dialogue_Resource = ExtResource("23_0nvf2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatchRalf"]
 shape = SubResource("CircleShape2D_kxsle")
+
+[node name="StartDialogue" parent="." instance=ExtResource("3_4ahp8")]
+dialogue_Resource = ExtResource("24_1gm24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartDialogue"]
+position = Vector2(216, 42)
+shape = SubResource("CircleShape2D_k4e2g")
