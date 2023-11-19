@@ -1,0 +1,11 @@
+~ start
+if State.LeifQuest == 3
+	Ralf was fotoed tampering with the printer
+	set State.RalfFotoed = true
+	=> END
+if State.LeifQuest == 1
+	Ralf was discovered tampering with the printer
+	set State.RalfDiscovered = true
+	=> END
+else 
+	No camera and nothing to discover

@@ -1,0 +1,26 @@
+~ start
+if State.BossPicture == true
+	if State.BossPictureFirst == true
+		Boss: Er det.. Hanne gav dig det?!
+		set State.BossPictureFirst == false
+	Boss: Please, jeg vil gøre hvad som helst, bare giv mig det billede!
+	if State.OleRequest == true
+		Player: Ole trænger til pension.
+		Boss: Okay?? selvfølgelig. Han var på sit sidste ben alligevel, eneste grund til vi havde ham stadig, var fordi kommunen støttede halvdelens af hans lønning.
+		set State.BossPicture = false
+		set State.OlePensioned = true
+		set State.OleQuest +=1
+		=> END
+	else
+		Player: Jeg skal nok finde på noget.
+		=> END
+do State.DialogueAmount(3)
+if State.Dialogue == 1
+	Boss: Hvad? Jeg har ikke tid!
+	=> END
+if State.Dialogue == 2
+	Boss: Hvorfor snakker du til mig?
+	=> END
+if State.Dialogue == 3
+	Boss: Kom i Gang!
+	=> END
